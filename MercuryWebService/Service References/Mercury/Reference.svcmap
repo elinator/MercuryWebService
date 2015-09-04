@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ec6ceed7-5600-44ec-b4d4-a5e47d45d788" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MercuryService.wsdl" MetadataType="Wsdl" ID="648f8c85-e402-431e-8346-8a519e41bef8" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MercuryService1.wsdl" MetadataType="Wsdl" ID="db2783e2-f7f3-4cf8-a588-111631980777" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?wsdl" />
+    <MetadataFile FileName="MercuryService.xsd" MetadataType="Schema" ID="6c3af132-9f4d-43cb-bc4d-41645f123a6c" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MercuryService1.xsd" MetadataType="Schema" ID="a6f46b10-7339-47ba-a265-957ad6553e67" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MercuryService2.xsd" MetadataType="Schema" ID="991f0ce2-849a-44d7-b0a4-a99301d4c230" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MercuryService3.xsd" MetadataType="Schema" ID="1cba9898-0c07-4350-9d86-c185068ee87c" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MercuryService4.xsd" MetadataType="Schema" ID="483ec0db-2aef-4582-9a41-9150ca13ca3c" SourceId="1" SourceUrl="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

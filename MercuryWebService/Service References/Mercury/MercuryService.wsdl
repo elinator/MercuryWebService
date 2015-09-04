@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://webservices.ticketnetwork.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://webservices.ticketnetwork.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://webservices.ticketnetwork.com/Imports">
+      <xsd:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd0" namespace="http://webservices.ticketnetwork.com" />
+      <xsd:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MercuryWebservice" />
+      <xsd:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMercuryService_UpdateMercuryOrderShipping_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMercuryOrderShipping" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_UpdateMercuryOrderShipping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMercuryOrderShippingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryOrderShipping_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryOrderShipping" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryOrderShipping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryOrderShippingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetOrderRequestDecision_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderRequestDecision" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetOrderRequestDecision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderRequestDecisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetFedExShippingMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFedExShippingMethods" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetFedExShippingMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFedExShippingMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTickets" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrder" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetTickets2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTickets2" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetTickets2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTickets2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryTempLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryTempLock" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryTempLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryTempLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrder2" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetLockDecision_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockDecision" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetLockDecision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockDecisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrder3" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_CreateMercuryOrder3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMercuryOrder3Response" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_UpdateMercuryOrderShipping2_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMercuryOrderShipping2" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_UpdateMercuryOrderShipping2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMercuryOrderShipping2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryInstantDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryInstantDownload" />
+  </wsdl:message>
+  <wsdl:message name="IMercuryService_GetMercuryInstantDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMercuryInstantDownloadResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IMercuryService">
+    <wsdl:operation name="UpdateMercuryOrderShipping">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/UpdateMercuryOrderShipping" message="tns:IMercuryService_UpdateMercuryOrderShipping_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/UpdateMercuryOrderShippingResponse" message="tns:IMercuryService_UpdateMercuryOrderShipping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMercuryOrderShipping">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryOrderShipping" message="tns:IMercuryService_GetMercuryOrderShipping_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryOrderShippingResponse" message="tns:IMercuryService_GetMercuryOrderShipping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderRequestDecision">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetOrderRequestDecision" message="tns:IMercuryService_GetOrderRequestDecision_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetOrderRequestDecisionResponse" message="tns:IMercuryService_GetOrderRequestDecision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetOrderDetails" message="tns:IMercuryService_GetOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetOrderDetailsResponse" message="tns:IMercuryService_GetOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFedExShippingMethods">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetFedExShippingMethods" message="tns:IMercuryService_GetFedExShippingMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetFedExShippingMethodsResponse" message="tns:IMercuryService_GetFedExShippingMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTickets">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetTickets" message="tns:IMercuryService_GetTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetTicketsResponse" message="tns:IMercuryService_GetTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMercuryOrder">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrder" message="tns:IMercuryService_CreateMercuryOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrderResponse" message="tns:IMercuryService_CreateMercuryOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTickets2">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetTickets2" message="tns:IMercuryService_GetTickets2_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetTickets2Response" message="tns:IMercuryService_GetTickets2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMercuryTempLock">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryTempLock" message="tns:IMercuryService_GetMercuryTempLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryTempLockResponse" message="tns:IMercuryService_GetMercuryTempLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMercuryOrder2">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrder2" message="tns:IMercuryService_CreateMercuryOrder2_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrder2Response" message="tns:IMercuryService_CreateMercuryOrder2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockDecision">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetLockDecision" message="tns:IMercuryService_GetLockDecision_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetLockDecisionResponse" message="tns:IMercuryService_GetLockDecision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMercuryOrder3">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrder3" message="tns:IMercuryService_CreateMercuryOrder3_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/CreateMercuryOrder3Response" message="tns:IMercuryService_CreateMercuryOrder3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMercuryOrderShipping2">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/UpdateMercuryOrderShipping2" message="tns:IMercuryService_UpdateMercuryOrderShipping2_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/UpdateMercuryOrderShipping2Response" message="tns:IMercuryService_UpdateMercuryOrderShipping2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMercuryInstantDownload">
+      <wsdl:input wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryInstantDownload" message="tns:IMercuryService_GetMercuryInstantDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://webservices.ticketnetwork.com/IMercuryService/GetMercuryInstantDownloadResponse" message="tns:IMercuryService_GetMercuryInstantDownload_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

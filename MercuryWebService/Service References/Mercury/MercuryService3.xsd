@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MercuryWebservice" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MercuryWebservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="MercuryOrderShipping">
+    <xs:sequence>
+      <xs:element name="mercuryOrderID" type="xs:int" />
+      <xs:element name="shipByDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="shippingTrackingCreatedStatus" type="xs:boolean" />
+      <xs:element name="shippingTrackingCreatedStatusDesc" nillable="true" type="xs:string" />
+      <xs:element name="shippingTrackingID" nillable="true" type="xs:string" />
+      <xs:element name="shippingTrackingLocation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MercuryOrderShipping" nillable="true" type="tns:MercuryOrderShipping" />
+  <xs:complexType name="MercuryOrderRequest">
+    <xs:sequence>
+      <xs:element name="highSeat" type="xs:int" />
+      <xs:element name="invoiceID" nillable="true" type="xs:string" />
+      <xs:element name="lowSeat" type="xs:int" />
+      <xs:element name="mercuryOrderID" type="xs:int" />
+      <xs:element name="message" nillable="true" type="xs:string" />
+      <xs:element name="row" nillable="true" type="xs:string" />
+      <xs:element name="section" nillable="true" type="xs:string" />
+      <xs:element name="sellerEmail" nillable="true" type="xs:string" />
+      <xs:element name="sellerName" nillable="true" type="xs:string" />
+      <xs:element name="sellerPhone" nillable="true" type="xs:string" />
+      <xs:element name="shipByDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="shippingTrackingCreatedStatus" type="xs:boolean" />
+      <xs:element name="shippingTrackingCreatedStatusDesc" nillable="true" type="xs:string" />
+      <xs:element name="shippingTrackingID" nillable="true" type="xs:string" />
+      <xs:element name="shippingTrackingLocation" nillable="true" type="xs:string" />
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MercuryOrderRequest" nillable="true" type="tns:MercuryOrderRequest" />
+  <xs:complexType name="ArrayOfFedExShippingMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FedExShippingMethod" nillable="true" type="tns:FedExShippingMethod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFedExShippingMethod" nillable="true" type="tns:ArrayOfFedExShippingMethod" />
+  <xs:complexType name="FedExShippingMethod">
+    <xs:sequence>
+      <xs:element name="MethodId" type="xs:int" />
+      <xs:element name="MethodName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FedExShippingMethod" nillable="true" type="tns:FedExShippingMethod" />
+  <xs:complexType name="ArrayOfTicketGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TicketGroup" nillable="true" type="tns:TicketGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTicketGroup" nillable="true" type="tns:ArrayOfTicketGroup" />
+  <xs:complexType name="TicketGroup">
+    <xs:sequence>
+      <xs:element name="EventID" type="xs:int" />
+      <xs:element name="FacePrice" type="xs:decimal" />
+      <xs:element name="HighSeat" nillable="true" type="xs:string" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element name="IsMine" type="xs:boolean" />
+      <xs:element name="LowSeat" nillable="true" type="xs:string" />
+      <xs:element name="Notes" nillable="true" type="xs:string" />
+      <xs:element name="OnHandExpectedArrivalDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="RetailPrice" type="xs:decimal" />
+      <xs:element name="Row" nillable="true" type="xs:string" />
+      <xs:element name="Section" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ShippingMethodsAvailable" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element name="TicketGroupType" nillable="true" type="xs:string" />
+      <xs:element name="TicketQuantity" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ValidSplits" nillable="true" type="q2:ArrayOfint" />
+      <xs:element name="WholesalePrice" type="xs:decimal" />
+      <xs:element name="isMercury" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TicketGroup" nillable="true" type="tns:TicketGroup" />
+  <xs:complexType name="ArrayOfTicketGroup2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TicketGroup2" nillable="true" type="tns:TicketGroup2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTicketGroup2" nillable="true" type="tns:ArrayOfTicketGroup2" />
+  <xs:complexType name="TicketGroup2">
+    <xs:sequence>
+      <xs:element name="EventID" type="xs:int" />
+      <xs:element name="FacePrice" type="xs:decimal" />
+      <xs:element name="HighSeat" nillable="true" type="xs:string" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element name="IsMine" type="xs:boolean" />
+      <xs:element name="IsSalesTaxApplicable" type="xs:boolean" />
+      <xs:element name="LowSeat" nillable="true" type="xs:string" />
+      <xs:element name="Notes" nillable="true" type="xs:string" />
+      <xs:element name="OnHandExpectedArrivalDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="RetailPrice" type="xs:decimal" />
+      <xs:element name="Row" nillable="true" type="xs:string" />
+      <xs:element name="Section" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ShippingMethodsAvailable" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element name="TicketGroupType" nillable="true" type="xs:string" />
+      <xs:element name="TicketQuantity" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ValidSplits" nillable="true" type="q4:ArrayOfint" />
+      <xs:element name="WholesalePrice" type="xs:decimal" />
+      <xs:element name="isMercury" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TicketGroup2" nillable="true" type="tns:TicketGroup2" />
+  <xs:complexType name="TempLockResponse">
+    <xs:sequence>
+      <xs:element name="currentQuantity" nillable="true" type="xs:int" />
+      <xs:element name="currentWholesalePrice" nillable="true" type="xs:decimal" />
+      <xs:element name="mercuryTempLockCompletionRate" type="xs:decimal" />
+      <xs:element name="mercuryTempLockExpirationSeconds" nillable="true" type="xs:int" />
+      <xs:element name="mercuryTempLockStatus" type="xs:boolean" />
+      <xs:element name="mercuryTempLockStatusDesc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempLockResponse" nillable="true" type="tns:TempLockResponse" />
+</xs:schema>

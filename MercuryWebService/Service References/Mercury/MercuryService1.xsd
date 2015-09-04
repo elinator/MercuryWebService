@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.ticketnetwork.com" elementFormDefault="qualified" targetNamespace="http://webservices.ticketnetwork.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MercuryWebservice" />
+  <xs:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://webservices-test.ticketnetwork.com/MercuryWebServices/MercuryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="UpdateMercuryOrderShipping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="mercuryOrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPONumber" type="xs:int" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodDesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shippingPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="retailCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountryID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerZipcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMercuryOrderShippingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="UpdateMercuryOrderShippingResult" nillable="true" type="q1:MercuryOrderShipping" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryOrderShipping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="mercuryOrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryOrderShippingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetMercuryOrderShippingResult" nillable="true" type="q2:MercuryOrderShipping" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderRequestDecision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage1Guid" type="q3:guid" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage2Guid" type="q4:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderRequestDecisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetOrderRequestDecisionResult" nillable="true" type="q5:MercuryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="mercuryOrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetOrderDetailsResult" nillable="true" type="q6:MercuryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFedExShippingMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="websiteConfigID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFedExShippingMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetFedExShippingMethodsResult" nillable="true" type="q7:ArrayOfFedExShippingMethod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTickets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="websiteConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfRecords" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="eventID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="lowPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="highPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ticketGroupID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTicketsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetTicketsResult" nillable="true" type="q8:ArrayOfTicketGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPONumber" type="xs:int" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="wholesalePrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="overridePrice" type="xs:boolean" />
+        <xs:element minOccurs="0" name="shippingMethodID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodDesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shippingPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="shippingInstructions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountryID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerZipcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="generalPurchaseNotes" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage1Guid" type="q9:guid" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage2Guid" type="q10:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="CreateMercuryOrderResult" nillable="true" type="q11:MercuryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTickets2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="websiteConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfRecords" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="eventID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="lowPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="highPrice" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ticketGroupID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTickets2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetTickets2Result" nillable="true" type="q12:ArrayOfTicketGroup2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryTempLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="LockRequestID" type="q13:guid" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="wholesalePrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="overridePrice" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryTempLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetMercuryTempLockResult" nillable="true" type="q14:TempLockResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrder2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPONumber" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodDesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shippingPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="shippingInstructions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountryID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerZipcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="generalPurchaseNotes" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage1Guid" type="q15:guid" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage2Guid" type="q16:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrder2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="CreateMercuryOrder2Result" nillable="true" type="q17:MercuryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockDecision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="LockRequestID" type="q18:guid" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockDecisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="GetLockDecisionResult" nillable="true" type="q19:TempLockResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrder3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPONumber" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodDesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="labelUrl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trackingNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shippingPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="shippingInstructions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerZipcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountryID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="generalPurchaseNotes" nillable="true" type="xs:string" />
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage1Guid" type="q20:guid" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="stage2Guid" type="q21:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMercuryOrder3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="CreateMercuryOrder3Result" nillable="true" type="q22:MercuryOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMercuryOrderShipping2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="mercuryOrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPONumber" type="xs:int" />
+        <xs:element minOccurs="0" name="ticketGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodID" type="xs:int" />
+        <xs:element minOccurs="0" name="shippingMethodDesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="labelUrl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trackingNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shippingPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="retailCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerPhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStreet2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerStateProvinceID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerZipcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retailCustomerCountryID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="retailCustomerEmail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMercuryOrderShipping2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MercuryWebservice" minOccurs="0" name="UpdateMercuryOrderShipping2Result" nillable="true" type="q23:MercuryOrderShipping" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryInstantDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webConfigID" type="xs:int" />
+        <xs:element minOccurs="0" name="mercuryOrderID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMercuryInstantDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/Message" name="GetMercuryInstantDownloadResult" type="q24:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
